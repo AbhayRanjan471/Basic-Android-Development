@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Optimize RecyclerView</string>
+    <string name="show_countries">SHOW COUNTRIES</string>
+</resources>

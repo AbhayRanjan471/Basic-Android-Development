@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ListView Alert_Dialogs</string>
+    <string name="add">ADD</string>
+    <string name="reset">RESET</string>
+</resources>

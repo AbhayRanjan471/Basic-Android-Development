@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/important_information_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="16dp"
+
+            android:text="@string/important_information_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/total_fare_label" />
+
+        <TextView
+            android:id="@+id/important_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:padding="16dp"
+            android:text="@string/important_information"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/important_information_label" />
+
+        <TextView
+            android:id="@+id/total_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="INR 7811.00"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/more_facility_info" />
+
+        <TextView
+            android:id="@+id/total_fare_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/total_fare"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/total_fare"
+            app:layout_constraintTop_toTopOf="@+id/total_fare" />
+
+        <Button
+            android:id="@+id/more_facility_info"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/more"
+            app:layout_constraintStart_toEndOf="@+id/luggage_qty"
+            app:layout_constraintTop_toBottomOf="@+id/airlines" />
+
+        <ImageView
+            android:id="@+id/wifi"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/more_facility_info"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toTopOf="@+id/more_facility_info"
+            app:srcCompat="@drawable/ic_wifi_24dp" />
+
+        <ImageView
+            android:id="@+id/food"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintStart_toEndOf="@+id/wifi"
+            app:layout_constraintTop_toTopOf="@+id/wifi"
+            app:srcCompat="@drawable/ic_food_24dp" />
+
+        <ImageView
+            android:id="@+id/power"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintStart_toEndOf="@+id/food"
+            app:layout_constraintTop_toTopOf="@+id/food"
+            app:srcCompat="@drawable/ic_power_24dp" />
+
+        <ImageView
+            android:id="@+id/luggage"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintStart_toEndOf="@+id/power"
+            app:layout_constraintTop_toTopOf="@+id/power"
+            app:srcCompat="@drawable/ic_luggage_24dp" />
+
+        <TextView
+            android:id="@+id/luggage_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="2 pcs(14kg)"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/luggage"
+            app:layout_constraintTop_toTopOf="@+id/luggage" />
+
+        <TextView
+            android:id="@+id/flight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/flight_no"
+            app:layout_constraintEnd_toEndOf="@+id/departure_terminal_label"
+            app:layout_constraintStart_toStartOf="@+id/departure_terminal_label"
+            app:layout_constraintTop_toBottomOf="@+id/departure_terminal" />
+
+        <TextView
+            android:id="@+id/seat_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/seat"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/departure_time" />
+
+        <TextView
+            android:id="@+id/seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11B"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/seat_label" />
+
+        <ImageView
+            android:id="@+id/airlines_label"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/departure_gate"
+            app:srcCompat="@drawable/ic_koyon_24dp" />
+
+        <TextView
+            android:id="@+id/airlines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/koyon"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/airlines_label" />
+
+        <TextView
+            android:id="@+id/flight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KY 12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/flight_label"
+            app:layout_constraintStart_toStartOf="@+id/flight_label"
+            app:layout_constraintTop_toBottomOf="@+id/flight_label" />
+
+        <TextView
+            android:id="@+id/departure_terminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T3"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/departure_terminal_label"
+            app:layout_constraintStart_toStartOf="@+id/departure_terminal_label"
+            app:layout_constraintTop_toBottomOf="@+id/departure_terminal_label" />
+
+        <TextView
+            android:id="@+id/departure_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/departure_time"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/airport_map" />
+
+        <TextView
+            android:id="@+id/departure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:35 AM"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/departure_time_label" />
+
+        <TextView
+            android:id="@+id/departure_gate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 A"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/departure_gate_label" />
+
+        <TextView
+            android:id="@+id/departure_gate_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/gate"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/airport_map" />
+
+        <TextView
+            android:id="@+id/departure_terminal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/terminal"
+            app:layout_constraintEnd_toEndOf="@+id/departure_gate_label"
+            app:layout_constraintStart_toStartOf="@+id/departure_time_label"
+            app:layout_constraintTop_toBottomOf="@+id/airport_map" />
+
+        <ImageButton
+            android:id="@+id/airport_map"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/arrival_airport_full"
+            app:srcCompat="@drawable/ic_place_24dp" />
+
+        <ImageView
+            android:id="@+id/flight_takeoff"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/departure_date"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toTopOf="@+id/departure_airport_name"
+            app:srcCompat="@drawable/ic_flight_takeoff_24dp" />
+
+        <TextView
+            android:id="@+id/departure_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday, 18th March"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/departure_airport_name"
+            app:layout_constraintTop_toBottomOf="@+id/departure_airport_name" />
+
+        <TextView
+            android:id="@+id/departure_airport_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Indira Gandhi International Airport, Delhi"
+            app:layout_constraintEnd_toStartOf="@+id/airport_map"
+            app:layout_constraintStart_toEndOf="@+id/flight_takeoff"
+            app:layout_constraintTop_toTopOf="@+id/airport_map" />
+
+        <TextView
+            android:id="@+id/flight_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7h 45m (0 stopover)"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/duration_separator"
+            app:layout_constraintStart_toStartOf="@+id/duration_separator"
+            app:layout_constraintTop_toBottomOf="@+id/duration_separator" />
+
+        <TextView
+            android:id="@+id/departure_airport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:text="DEL"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_first_name" />
+
+        <TextView
+            android:id="@+id/departure_airport_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="(DELHI)"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/departure_airport" />
+
+        <TextView
+            android:id="@+id/flight_duration_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/flight_duration"
+            app:layout_constraintEnd_toStartOf="@+id/arrival_airport"
+            app:layout_constraintStart_toEndOf="@+id/departure_airport"
+            app:layout_constraintTop_toTopOf="@+id/departure_airport" />
+
+        <TextView
+            android:id="@+id/arrival_airport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAG"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toTopOf="@+id/flight_duration_label" />
+
+        <TextView
+            android:id="@+id/arrival_airport_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="(NAGPUR)"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/arrival_airport" />
+
+        <View
+            android:id="@+id/departure_schedule_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/pnr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/pnr_no"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/depart_time_left" />
+
+        <ImageView
+            android:id="@+id/watch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/depart_time_left"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_label"
+
+            app:srcCompat="@drawable/ic_watch_24dp" />
+
+        <TextView
+            android:id="@+id/depart_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flight_departing_in_5_days"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/watch"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_label"
+            app:layout_constraintTop_toTopOf="@+id/watch"
+            />
+
+        <TextView
+            android:id="@+id/scheduled_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:text="@string/scheduled"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/duration_separator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/arrival_airport_full"
+            app:layout_constraintStart_toEndOf="@+id/departure_airport_full"
+            app:layout_constraintTop_toBottomOf="@+id/flight_duration_label" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <TextView
+            android:id="@+id/passenger_first_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/first_name"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/departure_schedule_background" />
+
+        <TextView
+            android:id="@+id/passenger_last_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/last_name"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/passenger_first_name_label" />
+
+        <TextView
+            android:id="@+id/passenger_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_first_name_label" />
+
+        <TextView
+            android:id="@+id/passenger_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Doe"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_last_name_label" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="passenger_first_name_label,passenger_first_name"
+            tools:layout_editor_absoluteX="411dp" />
+
+        <TextView
+            android:id="@+id/age_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="@string/age"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/passenger_last_name_label" />
+
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="@string/gender"
+            app:layout_constraintStart_toEndOf="@+id/age_label"
+            app:layout_constraintTop_toTopOf="@+id/age_label" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="passenger_last_name_label,passenger_last_name"
+            tools:layout_editor_absoluteX="191dp" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/age_label"
+            app:layout_constraintTop_toBottomOf="@+id/age_label" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/gender_label"
+            app:layout_constraintTop_toBottomOf="@+id/gender_label" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
